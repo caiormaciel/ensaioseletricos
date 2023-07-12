@@ -36,7 +36,12 @@ btnrn.onclick = function clickrn() {
     var alta = Number(AT.value)
     var baixa = Number(BT.value)
     var relNom = (alta / baixa) * 1.73205081.toFixed(4)
+
+    if (alta == ''){
+        alert('Preencha os Dados')
+    } else {
     document.querySelector('p#RN').innerHTML = ` ${relNom.toFixed(4)}`
+    }
 }
 
 btnt.onclick = function clickt() {
@@ -127,26 +132,37 @@ btnp.onclick = function clickp(){
     
     //AT
 
+    if (fase1 == "" || fase2 == "" || fase3 == ""){
+        alert('Preencha os dados')
+    } else {
+
     medicoesat = [`${fase1}`,`${fase2}`,`${fase3}`]
     let maiorat = Math.max(...medicoesat)
     let menorat = Math.min(...medicoesat)
     let divisaoat = ((maiorat / menorat)-1)*100
     variacaoat.innerHTML = `O resultado é ${divisaoat.toFixed(4)} %`
+    }
 
     //BT 
-
+    if (fase4 == "" || fase5 == "" || fase6 == ""){
+        alert('Preencha os dados')
+    } else {
     medicoesbt = [`${fase4}`,`${fase5}`,`${fase6}`]
     let maiorbt = Math.max(...medicoesbt)
     let menorbt = Math.min(...medicoesbt)
     let divisaobt = ((maiorbt / menorbt)-1)*100
     variacaobt.innerHTML = `O resultado é ${divisaobt.toFixed(4)} %`
-
+    }
 
     //BT pro X0
 
+    if (fase7 == "" || fase8 == "" || fase9 == ""){
+        alert('Preencha os dados')
+    } else {
     medicoesbtx = [`${fase7}`,`${fase8}`,`${fase8}`]
     let maiorbtx = Math.max(...medicoesbtx)
     let menorbtx = Math.min(...medicoesbtx)
     let divisaobtx = ((maiorbtx / menorbtx)-1)*100
     variacaobtx.innerHTML = `O resultado é ${divisaobtx.toFixed(4)} %`
+    }
 }
