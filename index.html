@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Ensaio Elétricos</title>
+</head>
+<body>
+    <div class="ensaios">
+        <h1>Ensaios Elétricos</h1>
+        <input type="text" id="cliente" placeholder="Cliente">
+        <input type="text" id="numserie" placeholder="Número de série:">
+        <input type="text" id="potencia" placeholder="Potência">
+        <p>Insira os valores das tensões</p>
+        <input type="number" id="alta" placeholder="Alta tensão">
+        <input type="number" id="baixa" placeholder="Baixa tensão">
+        <p>Relação nominal: </p>
+        <p id="RN"></p>
+        <button id="btnrn" onclick="clickrn()">VERIFICAR</button>
+            <div class="ttr">
+                <h2>Ensaio de Relação de transformação</h2>
+                <p>Preencha os valores obtidos</p>
+                <input type="number" id="coluna1" placeholder="Coluna 1">
+                <p>Variação: </p>
+                <p id="variacaot1"></p>
+                <input type="number" id="coluna2" placeholder="Coluna 2">
+                <p>Variação: </p>
+                <p id="variacaot2"></p>
+                <input type="number" id="coluna3" placeholder="Coluna 3">
+                <p>Variação: </p>
+                <p id="variacaot3"></p>
+                <button id="btnt" onclick="clickt()">VERIFICAR</button>
+                
+            </div>
+            <div class="ponte">
+                <h2>Ensaio de Resistência Ôhmica dos Enrolamentos</h2>
+                <h3>Alta Tensão</h3>
+                <input type="number" id="a1-2" placeholder="Fase 1 - Fase 2">
+                <input type="number" id="a1-3" placeholder="Fase 1 - Fase 3">
+                <input type="number" id="a2-3" placeholder="Fase 2 - Fase 3">
+                <p>Variação: </p>
+                <p id="variacaopat"></p>
+                <h3>Baixa tensão</h3>
+                <input type="number" id="b1-2" placeholder="Fase 1 - Fase 2">
+                <input type="number" id="b1-3" placeholder="Fase 1 - Fase 3">
+                <input type="number" id="b2-3" placeholder="Fase 2 - Fase 3">
+                <p>Variação</p>
+                <p id="variacaopbt"></p>
+                <input type="number" id="c1-2" placeholder="Neutro - Fase 1">
+                <input type="number" id="c1-3" placeholder="Neutro - Fase 2">
+                <input type="number" id="c2-3" placeholder="Neutro - Fase 3">
+                <p>Variação</p>
+                <p id="variacaopbtx"></p>
+                <button id="btnp" onclick="clickp()">VERIFICAR</button>
+            </div>
+            <div class="megger">
+                <h2>Ensaio de Resistência de Isolamento</h2>
+                <input type="number" id="at-bt" placeholder="AT-BT">
+                <input type="number" id="at-massa" placeholder="AT-Massa">
+                <input type="number" id="bt-massa" placeholder="BT-Massa">
+            </div>
+
+    
+    </div>
+    <form>
+        <input type="button" value="Imprimir" onClick="window.print()" />
+     </form>
+
+    
+    <script src="app.js"></script>
+</body>
+</html>
