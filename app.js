@@ -60,7 +60,11 @@ btnt.onclick = function clickt() {
          varcoluna1.innerHTML = `Valor abaixo do estabelecido ${porcent1.toFixed(4)} %`
     } 
     else {
-        varcoluna1.innerHTML = `Valor dentro do Estabelecido`
+        medrel1 = [`${m1}`,`${relNom}`]
+        let maiorrel1 = Math.max(...medrel1)
+        let menorrel1 = Math.min(...medrel1)
+        let divisaorel1 = ((maiorrel1 / menorrel1)-1)*100
+        varcoluna1.innerHTML = `Valor dentro do Estabelecido ${divisaorel1.toFixed(4)} %`
     }
 
     // Coluna 2
@@ -77,7 +81,11 @@ btnt.onclick = function clickt() {
          varcoluna2.innerHTML = `Valor abaixo do estabelecido ${porcent2.toFixed(4)}%`
     } 
     else{
-        varcoluna2.innerHTML = `Valor dentro do Estabelecido`
+        medrel2 = [`${m2}`,`${relNom}`]
+        let maiorrel2 = Math.max(...medrel2)
+        let menorrel2 = Math.min(...medrel2)
+        let divisaorel2 = ((maiorrel2 / menorrel2)-1)*100
+        varcoluna2.innerHTML = `Valor dentro do Estabelecido ${divisaorel2.toFixed(4)} %`
     }
 
     //Coluna 3
@@ -96,7 +104,11 @@ btnt.onclick = function clickt() {
 
     } 
     else {
-        varcoluna3.innerHTML = `Valor dentro do Estabelecido`
+        medrel3 = [`${m3}`,`${relNom}`]
+        let maiorrel3 = Math.max(...medrel3)
+        let menorrel3 = Math.min(...medrel3)
+        let divisaorel3 = ((maiorrel3 / menorrel3)-1)*100
+        varcoluna3.innerHTML = `Valor dentro do Estabelecido ${divisaorel3.toFixed(4)} %`
     
     }
 }
