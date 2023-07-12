@@ -21,7 +21,9 @@ body {
 .ensaios {
     margin-top: 30px;
 }
-
+#data {
+    width: 144px;
+}
 input {
     text-align: center;
     margin: 10px 0 10px 0;
